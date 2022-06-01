@@ -1,0 +1,21 @@
+{% for block in page.sections %}
+  {% assign template = block.template %}
+  {% case template %}
+  {% when 'hero' %}
+    {% include sections/hero.html %}
+  {% when 'quick-links' %}
+    {% include sections/quick-links.html %}
+  {% when 'purple-carousel' %}
+    {% include sections/purple-carousel.html %}
+  {% when 'green-carousel' %}
+    {% include sections/green-carousel.html %}
+  {% when 'text-area' %}
+    {% include sections/text-area.html %}
+  {% when 'card-with-image' %}
+    {% include sections/card-image.html %}
+  {% when 'history' %}
+    {% include sections/history.html %}
+  {% when 'testimonial' %}
+    {% include sections/testimonial.html %}
+  {% endcase %}
+{% endfor %}

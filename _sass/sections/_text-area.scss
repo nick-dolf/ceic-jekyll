@@ -1,0 +1,8 @@
+.text-area {
+
+  @include spacing-std-nopad;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}

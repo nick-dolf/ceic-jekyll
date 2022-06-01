@@ -1,0 +1,17 @@
+.quick-link-container {
+  background-color: $neutrals50;
+  text-align: center;
+
+  @include spacing-std;
+
+  @include tablet {
+    padding: 32px;
+  }
+
+  h3 {
+    margin: 0px 0 24px 0;
+    text-align: center;
+  }
+
+
+}

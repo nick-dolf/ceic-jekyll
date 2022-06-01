@@ -1,0 +1,58 @@
+---
+label: Layout-Default
+hide_body: true
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+    max: 64
+    min: 4
+  label: Title
+- name: description
+  type: text
+  config:
+    required: true
+  label: Description
+  description: For the description meta tag, important for SEO.
+  default: " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+    voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+- name: permalink
+  type: text
+  config:
+    required: false
+  label: Permalink
+  hidden: true
+  default: "/:path/:basename/"
+- name: layout
+  type: select
+  default: default
+  config:
+    required: false
+    options:
+    - default
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  hidden: true
+  label: Layout
+- name: sections
+  type: blocks
+  label: Sections
+  template_types:
+  - hero
+  - quick-links
+  - purple-carousel
+  - card-with-image
+  - text-area
+  - green-carousel
+  - testimonial
+  - history
+  config:
+    min: 
+    max: 
+pages:
+- pages/services/sample-page.md

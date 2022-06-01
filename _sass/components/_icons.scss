@@ -21,15 +21,14 @@
   }
 }
 
+.icon--small {
+  height: 1.6rem;
+}
+
 /* Triangle Icon */
 .icon-triangle {
   transform-origin: center;
   transition: transform $speed-std;
-  transform: rotateZ(180deg);
-}
-
-.icon-triangle:hover {
-  transform: rotateZ(0deg);
 }
 
 /* Plus Icon */
@@ -44,7 +43,7 @@
   &:after{
       content: "";
       position: absolute;
-      height: .2rem;
+      height: .3rem;
       width: 1.6rem;
       border-radius: 10px;
       background-color: $link-green;
@@ -114,6 +113,7 @@
 
     transform: translate(0.6rem, 0.6rem) rotate(45deg);
     transition: all $speed-std ease-in-out;
+
   }
 
 

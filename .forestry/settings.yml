@@ -1,0 +1,59 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: admin
+webhook_url: 
+sections:
+- type: document
+  path: pages/index.md
+  label: Home
+- type: directory
+  path: pages/about-us
+  label: About Us
+  create: all
+  match: "**/*"
+  templates:
+  - default
+- type: directory
+  path: pages/our-work
+  label: Our Work
+  create: all
+  match: "**/*"
+  templates:
+  - default
+- type: directory
+  path: pages/services
+  label: Services
+  create: all
+  match: "**/*"
+  templates:
+  - default
+- type: directory
+  path: pages/get-involved
+  label: Get Involved
+  create: all
+  match: "**/*"
+  templates:
+  - default
+- type: directory
+  path: pages
+  label: Pages
+  create: all
+  match: "**/*"
+  templates:
+  - default
+upload_dir: assets/images
+public_path: "/assets/images"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  preview_env:
+  - JEKYLL_ENV=staging
+  preview_output_directory: _site
+  install_dependencies_command: bundle install --path vendor/bundle
+  preview_docker_image: forestryio/ruby:2.6
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: bundle exec jekyll serve --drafts --unpublished --future
+    --port 8080 --host 0.0.0.0 -d _site

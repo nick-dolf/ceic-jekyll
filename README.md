@@ -3,13 +3,21 @@ Most recent build can be seen on the staging server [here](https://nickdolf.com/
 
 [Code for Chicago](https://codeforchicago.org/) is developing a new website for [Cannabis Equity Illinois Coalition](https://cannabisequityil.org/)
 
+### Design and Supporting Docs
+
+[Design System](https://www.figma.com/file/GdtORowLCJ95LE28ESWsFo/CEIC-Design-System?node-id=502%3A2) on Figma
+
+[Design Working File](https://www.figma.com/file/C4pcLvWyQBz2fKCvJ2fMdT/CEIC-Working-File?node-id=3660%3A0) on Figma
+
+[Site layout](https://docs.google.com/document/d/1D74Eb7aSYbjoU7gelxx_sEGSNmSwgsM6luxeaF7NluY/edit) on Google Docs
+
 ### Technology
 This project is being developed with [Jekyll](https://jekyllrb.com/) and uses HTML, SCSS, Markdown and Liquid.
 
 ## Setup
 - Get Jekyll running on your local machine by following their [guide](https://jekyllrb.com/docs/)
 - Make sure you have your ssh key [setup](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
-- Clone this repository `git clone git@github.com:nick-dolf/ceic-jekyll.git`
+- Clone this repository `git clone git@github.com:Code-For-Chicago/ceic-jekyll.git`
 - cd into the directory `cd ceic-jekyll`
 - Install dependencies with `bundle install`
 - Start the local server with `bundle exec jekyll serve`
@@ -28,9 +36,9 @@ We have few coding and workflow conventions we ask all contributors to follow, i
 It's not the end of world of course, we can always revert the commit, but the workflow I use is:
 - create a new branch with a meaningful name `git branch amazing-feature`
 - switch to it with `git switch amazing-feature`
-- do your amazing work in the new branch with meaningful commits`git add .` and ` `git commit -m 'added excellent api connection for amazing feature'`
+- do your amazing work in the new branch with meaningful commits`git add .` and `git commit -m 'added excellent api connection for amazing feature'`
 - check if master has diverged `git pull origin master`, merge it back `git merge master` and deal with any conflicts
-- push the branch to the repo `git push -u origin amazing-feature` and make a [pull request](https://github.com/nick-dolf/ceic-jekyll/pulls)
+- push the branch to the repo `git push -u origin amazing-feature` and make a [pull request](https://github.com/Code-For-Chicago/ceic-jekyll/pulls)
 - One other developer should look over the changes and approve or suggest changes
 
 If you see a merge request and want to approve it:
@@ -64,6 +72,8 @@ Please try to keep the names of classes, images etc. in a consistent format.
 We'd like to keep all the code in master branch as close to production as possible. Feel free to keep a personal branch(s) to play around in when testing etc. When you are ready: create a new branch, write only the code needed, test it, document it, make meaningful commits and then make a merge request.
 
 ### Where should I start?
-Look through the [issues](https://github.com/nick-dolf/ceic-jekyll/issues), and assign one to yourself. Or create an issue if you see something else that needs fixing.
+Complete the [first issue](https://github.com/Code-For-Chicago/ceic-jekyll/issues/12). Yes it's silly, but it lets a new dev test out the whole dev flow and all the tech works. 
+
+Look through the [issues](https://github.com/Code-For-Chicago/ceic-jekyll/issues), and assign one to yourself. Or create an issue if you see something else that needs fixing.
 
 #### Welcome onboard! (=^ ◡ ^=)

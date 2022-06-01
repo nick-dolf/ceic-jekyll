@@ -1,0 +1,119 @@
+/* COMMON SPACINGS */
+@mixin spacing-std {
+  padding: 16px;
+  margin: 32px 16px;
+
+  @include tablet {
+    padding: 32px;
+    margin: 64px 32px;
+  }
+
+  @include desktop {
+    margin: 64px auto;
+    width: 88%;
+    max-width: $max-content-width;
+  }
+}
+
+@mixin spacing-short {
+  padding: 16px;
+  margin: 16px 16px;
+
+  @include tablet {
+    padding: 32px;
+    margin: 32px 32px;
+  }
+
+  @include desktop {
+    margin: 32px auto;
+    width: 88%;
+    max-width: $max-content-width;
+  }
+}
+
+@mixin spacing-skinny-nopad {
+  margin: 16px;
+
+  @include tablet {
+    margin: 24px;
+  }
+
+  @include desktop {
+    margin: 24px auto;
+    width: 88%;
+    max-width: $max-content-width;
+  }
+}
+
+@mixin spacing-std-nopad {
+  margin: 32px 16px;
+
+  @include tablet {
+    margin: 64px 32px;
+  }
+
+  @include desktop {
+    margin: 64px auto;
+    width: 88%;
+    max-width: $max-content-width;
+  }
+}
+
+@mixin spacing-large {
+  padding: 32px;
+
+  @include tablet {
+    padding: 64px;
+  }
+}
+
+@mixin left-margin-abs {
+  left: 16px;
+
+  @include tablet {
+    left: 32px;
+  }
+
+  @include desktop {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 88%;
+    max-width: $max-content-width;
+  }
+}
+
+@mixin content-width-std {
+  @include desktop {
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+}
+
+/* MEDIA */
+@mixin tablet {
+  @media screen and (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+.mobile-only {
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.tablet-plus {
+  display: none;
+
+  @include tablet {
+    display: revert;
+  }
+}

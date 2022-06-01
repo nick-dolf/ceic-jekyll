@@ -1,12 +1,15 @@
-@import 'abstracts/colors';
+@import 'vendor/normalize';
+
 @import 'abstracts/fonts';
-@import 'abstracts/links';
-@import 'abstracts/media';
-@import 'abstracts/timings';
-@import 'base/typography';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
 @import 'base/global';
+@import 'base/typography';
 
 @import 'components/buttons';
+@import 'components/cards';
+@import 'components/carousel';
 @import 'components/forms';
 @import 'components/hamburgers';
 @import 'components/lists';
@@ -14,10 +17,19 @@
 @import 'components/icons';
 @import 'components/footer-news';
 @import 'components/social';
-@import 'layouts/nav-primary';
+
 @import 'layouts/site-body';
 @import 'layouts/site-header';
 @import 'layouts/site-footer';
 
+@import 'menus/header';
+@import 'menus/footer';
+
+@import 'sections/hero';
+@import 'sections/history';
+@import 'sections/quick-links';
+@import 'sections/testimonial';
+@import 'sections/text-area';
 //remove before production
 @import 'dev';
+@import 'easter/easter-egg';

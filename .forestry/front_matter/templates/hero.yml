@@ -1,0 +1,34 @@
+---
+label: Hero Image
+hide_body: true
+fields:
+- name: image
+  type: file
+  config:
+    required: true
+    maxSize: 64
+  label: Image
+  description: Ideal image size is 1440 x 544px
+  default: "/assets/images/placehold/1440x544.png"
+- name: alt_text
+  type: text
+  config:
+    required: true
+    min: 8
+  label: Alt text
+  default: Blank placeholder image
+  description: Required to maintain accessibility standards.
+- name: heading
+  type: text
+  config:
+    required: false
+  label: Heading
+  description: Optional. Will display page title if exactly "page-title"
+  default: page-title
+- name: subtitle
+  type: text
+  config:
+    required: false
+  label: Subtitle
+  description: Optional. Will display description if exactly "page-description"
+  default: page-description

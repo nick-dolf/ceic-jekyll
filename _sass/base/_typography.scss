@@ -1,12 +1,6 @@
 html {
   font-size: 62.5%; // allows easy font size calc. std font is 16px *.625 = 10px
   font-family: Karla, helvetica;
-  box-sizing: border-box;
-}
-
-/* Keeps box sizing consistent across elements, while allowing overides as neeeded*/
-*, *:before, *:after {
-  box-sizing: inherit;
 }
 
 body {
@@ -14,30 +8,194 @@ body {
   line-height: 1.5;
 }
 
+h1, h2, h3 {
+  line-height: 1.2;
+  margin-block-start: 3.2rem;
+  margin-block-end: 1.6rem;
+  text-align: center;
+}
+
 h1 {
-  font-size: 3.8rem;
+  font-size: 4.0rem;
   font-weight: bold;
-  line-height: 4.4rem;
+
+  @include tablet {
+    font-size: 5.0rem;
+  }
+
+  @include desktop {
+    font-size: 6.0rem;
+  }
 }
 
 h2 {
-  font-size: 2.4rem;
+  font-size: 3.2rem;
   font-weight: bold;
-  line-height: 2.8rem;
+
+  @include tablet {
+    font-size: 4.0rem;
+  }
 }
 
 h3 {
-  font-size: 2rem;
-  text-transform: uppercase;
-  line-height: 2.3rem;
+  font-size: 2.0rem;
+  font-weight: bold;
+
+  @include tablet {
+    font-size: 2.4rem;
+  }
+}
+
+h4 {
+  font-size: 2.0rem;
+  line-height: 2.4rem;
+  font-weight: bold;
+
 }
 
 p {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.navigation {
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  font-weight: bold;
+
+  @include tablet {
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    font-weight: normal;
+  }
+}
+
+.subtitle-1 {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
+.subtitle-2 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  line-height: 1.6rem;
+}
+
+.body-1 {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.body-2 {
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+}
+
+.caption {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.text-links {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.utility-links {
+  font-size: 1.2rem;
   line-height: 2.1rem;
+
+  @include tablet {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+
+  color: $dark-green;
+  transition: color $speed-std;
+
+  &:hover {
+    color: $ceic-green;
+  }
+}
+
+.menu-link {
+  text-decoration: none;
+  color: $dark-green;
+
+  line-height: 3rem;
+
+  &:active {
+    color: $input-grey;
+  }
+
+  @include tablet {
+    line-height: 4rem;
+    color: $black;
+
+    &:active {
+
+    }
+  }
+
 }
 
 strong {
   font-size: 1.6rem;
   font-weight: bold;
+}
+
+.link-icon {
+  line-height: 3.4rem;
+  color: $black;
+  transition: color $speed-std;
+  text-decoration: none;
+
+  span {
+    text-decoration: underline;
+  }
+
+  .icon {
+    width: 2.4rem;
+    margin-right: .5rem;
+  }
+
+  &:hover {
+    color: $ceic-green;
+
+    .icon {
+      fill: $ceic-green;
+    }
+  }
+
+}
+
+.link-icon--green {
+  line-height: 3.4rem;
+  color: $dark-green;
+  transition: color $speed-std;
+  text-decoration: none;
+
+  display: inline-flex;
+  align-items: center;
+
+  span {
+    text-decoration: underline;
+  }
+
+  .icon {
+    display: inline-block;
+    vertical-align: middle;
+    height: 1.6rem;
+    margin-left: .5rem;
+    fill: $dark-green;
+  }
+
+  &:hover {
+    color: $ceic-green;
+
+    .icon {
+      fill: $ceic-green;
+    }
+  }
+
 }

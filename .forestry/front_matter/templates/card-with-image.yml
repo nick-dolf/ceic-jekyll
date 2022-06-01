@@ -1,0 +1,73 @@
+---
+label: Card
+hide_body: true
+fields:
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: Image
+  default: "/assets/images/placehold/544x320.png"
+- name: alt_text
+  type: text
+  config:
+    required: false
+  label: Alt text
+  description: Required to maintain accessibility standards.
+  default: Blank placeholder image
+- name: heading
+  type: text
+  config:
+    required: false
+  label: Heading
+  default: Lorem ipsum
+- name: paragraph
+  type: textarea
+  default: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+    in culpa qui officia deserunt mollit anim id est laborum.
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Paragraph
+- name: button_or_links
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - button
+    - links
+    - none
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Add Button or Links
+- name: button
+  type: include
+  config: {}
+  template: button
+  label: Button
+  showOnly:
+    field: button_or_links
+    value: button
+- name: links
+  type: field_group_list
+  fields:
+  - name: link
+    type: include
+    config: {}
+    template: link
+    label: Link
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Links
+  showOnly:
+    field: button_or_links
+    value: links

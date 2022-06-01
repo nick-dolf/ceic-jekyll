@@ -1,0 +1,39 @@
+---
+label: Quick Links
+hide_body: true
+fields:
+- name: heading
+  type: text
+  config:
+    required: false
+  label: Heading
+  default: Quick Links
+- name: quick_links
+  type: field_group_list
+  fields:
+  - name: icon
+    type: select
+    default: video
+    config:
+      required: false
+      options:
+      - video
+      - house
+      - bill
+      - calendar
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Icon
+  - name: link
+    type: include
+    config: {}
+    template: link
+    label: Link
+  config:
+    min: 
+    max: 
+    labelField: text
+  label: Quick Links

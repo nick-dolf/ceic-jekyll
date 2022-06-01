@@ -1,0 +1,36 @@
+---
+label: Link
+hide_body: true
+display_field: text
+fields:
+- name: text
+  type: text
+  config:
+    required: false
+  label: Text
+- name: external
+  type: boolean
+  label: Site Page or External Link
+  default: false
+- name: site_page
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: pages
+      section: pages
+      file: 
+      path: 
+  label: Site Page
+  showOnly:
+    field: external
+- name: url
+  type: text
+  config:
+    required: false
+  label: External URL
+  showOnly:
+    field: external
+    value: true

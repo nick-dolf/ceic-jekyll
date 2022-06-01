@@ -1,0 +1,18 @@
+<section class="quick-link-container">
+  <h3>{{ block.heading }}</h3>
+
+  <ul class="list list--responsive">
+  {% for item in block.quick_links %}
+    <li class="list-item">
+      {% include components/link-svg.html
+        text = item.text
+        external = item.external
+        url = item.url
+        site_page = item.site_page
+        icon = item.icon
+      %}
+    </li>
+  {% endfor %}
+  </ul>
+
+</section>

@@ -1,0 +1,39 @@
+---
+label: Get Involved Carousel (green)
+hide_body: true
+fields:
+- name: heading
+  type: text
+  config:
+    required: false
+  label: Heading
+  default: How to get involved
+- name: green_block
+  type: field_group_list
+  fields:
+  - name: heading
+    type: text
+    config:
+      required: false
+      max: 12
+    label: Heading
+    default: Pariatur
+  - name: subtitle
+    type: textarea
+    default: quis nostrud exercitation ullamco
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Subtitle
+  - name: button
+    type: include
+    config: {}
+    template: button
+    label: Button
+  config:
+    min: 1
+    max: 
+    labelField: 
+  label: Green Block
